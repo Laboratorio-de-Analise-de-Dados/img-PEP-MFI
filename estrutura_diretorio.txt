@@ -33,6 +33,10 @@
 │   ├── objects
 │   │   ├── 02
 │   │   │   └── b7b637c5dbdb83e530e8737254ac39bfce7392
+│   │   ├── 0e
+│   │   │   └── ba002f4dbfea867cdcd524ef3c379a278a5891
+│   │   ├── 0f
+│   │   │   └── a69448b69e084fedddb59853e77ae86609ed1b
 │   │   ├── 11
 │   │   │   └── b1f8918599db250a8be2ee8c2cbdc70fa82123
 │   │   ├── 14
@@ -40,6 +44,8 @@
 │   │   │   └── ed27fa928d867bb16c028d773b673367dfc65c
 │   │   ├── 1d
 │   │   │   └── 0652d4d1f2c831841245b57b31ce7ab7c47d6d
+│   │   ├── 1e
+│   │   │   └── faa876ab49a456b017c12c9e9543b50aeb9302
 │   │   ├── 1f
 │   │   │   └── 86a6780d71e9e40002118a26c96acd1e49f2bc
 │   │   ├── 2d
@@ -71,6 +77,8 @@
 │   │   │   └── ed85f41fc6c5ad4444edb9c6258dffa3b1f1af
 │   │   ├── 7e
 │   │   │   └── ad316aba500cdb1ee4ca55e586701660baf70b
+│   │   ├── 82
+│   │   │   └── 78c6190b09069fd23ab57103af2eb786bd0a44
 │   │   ├── 8d
 │   │   │   ├── 9df78030bd0bd4e51f62808ae17af22b9a4d5d
 │   │   │   └── ab36d5f4bf232bda719315c90c0d94d0784ddd
@@ -179,4 +187,4 @@
     ├── Medida_resumo_mediana_df_img_Julia_05_06_24.ipynb
     └── filtro_img_2024_06_08.ipynb
 
-72 directories, 107 files
+76 directories, 111 files

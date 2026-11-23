@@ -52,6 +52,21 @@ def entrada_img() -> None:
 
             st.markdown(f"<h4>{uppload_file.name}</h4>", unsafe_allow_html=True)
             img = Image.open(uppload_file)
+            
+            try:
+                if np.array(img).shape[2] == 3:
+                    canais = False
+            except IndexError:
+                canais = True
+
+            if canais:
+                # Cria o array 3D preenchido com zeros, mantendo o mesmo tipo de dado (dtype)
+                img_3d = np.zeros((*np.array(img).shape, 3), dtype=np.array(img).dtype)
+
+                # Coloca a imagem na primeira camada (índice 0); use 1 ou 2 para outras camadas
+                img_3d[:, :, 1] = np.array(img)
+                
+                img = img_3d
 
             col = st.columns((1,3.5,.5))
             with col[0]:
@@ -77,6 +92,7 @@ def entrada_img() -> None:
                     np.array(img).shape[1],
                     np.array(img).shape[2],
                 )
+                
                 st.image(img_df_2, width=800)
         c += 1
         data_dict_img = {

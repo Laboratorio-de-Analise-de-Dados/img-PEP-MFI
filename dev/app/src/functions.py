@@ -28,6 +28,23 @@ class Functions():
 
     def img_to_df(_self, _img, por_retirada) -> pd.DataFrame:
         img_array = np.array(_img, dtype="float64")/255
+
+        try:
+            canais = img_array.shape[2]
+        except IndexError:
+            canais = 1
+        
+        if canais == 1:
+            # Cria o array 3D preenchido com zeros, mantendo o mesmo tipo de dado (dtype)
+            img_3d = np.zeros((*img_array.shape, 3), dtype=img_array.dtype)
+
+            # Coloca a imagem na primeira camada (índice 0); use 1 ou 2 para outras camadas
+            img_3d[:, :, 0] = img_array
+            img_3d[:, :, 1] = img_array
+            img_3d[:, :, 2] = img_array
+            
+            img_array = img_3d
+
         img_df_orig = pd.DataFrame(
                             columns=["red"],
                             data=img_array[:,:,0].reshape(-1,1)
